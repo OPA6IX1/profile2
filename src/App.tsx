@@ -1,41 +1,43 @@
-import opa6 from "./assets/PORTFOLIO (2).jpg";
-import Skill from "./components/Skills";
+// import React from "react";
+import { Routes, Route} from "react-router-dom";
+import Profile from "./pages/profile";
+import ProductPage from "./pages/productPage";
+// import SignUp from "./pages/SignUp";
 
 function App() {
   return (
-    <main className="">
-      <div className="bg-gradient-to-r from-blue-500 to-blue-200 to-50% w-full h-screen text-white flex flex-col-reverse lg:flex-row items-center justify-center gap-12">
-        <div className="text-center lg:text-left">
-          <h2 className="text-4xl font-semibold">Hello 👋</h2>
-          <h1 className="text-6xl font-bold">I'm Opakunle Sodiq</h1><br/>
-          <p className="text-2xl">And I'm a Frontend developer. 😉 </p>
+    <>
+      <nav className="h-16 w-full flex justify-center fixed top-0 left-0 bg-white shadow-lg shadow-blue-500 z-50">
+        <div className="w-[90%] flex gap-12 items-center justify-between">
+          <h1 className="hidden md:flex text-lg md:text-2xl italic font-semibold text-blue-600">
+            Opa6ix
+          </h1>
+          <ul className="flex items-center gap-8 text-sm md:text-lg">
+            <li className="hover:text-blue-500">
+              <a href="/profile">Profile</a>
+            </li>
+            <li className="hover:text-blue-500">
+              <a href="/product">Product Page</a>
+            </li>
+            <li>
+              <a href="/">
+                <button className="bg-blue-500 hover:bg-blue-800 py-2 px-8 rounded text-white text-base font-semibold">
+                  Sign Up
+                </button>
+              </a>
+            </li>
+          </ul>
         </div>
+      </nav>
 
-        <div className="">
-          <img
-            src={opa6}
-            alt=""
-            className="rounded-full border-4 border-white w-80 h-80 shadow-2xl shadow-sky-800"
-          />
-        </div>
-      </div>
-
-      <div className="h-screen w-full bg-gradient-to-l from-blue-500 to-blue-200 from-50% text-white flex flex-col items-center gap-12">
-        <h1 className="text-4xl font-semibold text-center">My Skills</h1>
-
-        <div className="flex gap-8 flex-wrap justify-center ">
-          <Skill skill="HTML5" />
-          <Skill skill="CSS3" />
-          <Skill skill="JavaScript" />
-          <Skill skill="React" />
-          <Skill skill="Next.js" />
-          <Skill skill="Tailwind CSS" />
-          <Skill skill="Bootstrap" />
-          <Skill skill="Redux" />
-          <Skill skill="Wordpress" />
-        </div>
-      </div>
-    </main>
+      <main className="mt-16">
+        <Routes>
+          <Route path="profile" element={<Profile />} />
+          <Route path="product" element={<ProductPage />} />
+          {/* <Route path="/" element={<SignUp />} /> */}
+        </Routes>
+      </main>
+    </>
   );
 }
 
