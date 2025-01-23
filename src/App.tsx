@@ -2,7 +2,7 @@
 import { Routes, Route} from "react-router-dom";
 import Profile from "./pages/profile";
 import ProductPage from "./pages/productPage";
-// import SignUp from "./pages/SignUp";
+import SignUp from "./pages/signUp";
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
         <Routes>
           <Route path="profile" element={<Profile />} />
           <Route path="product" element={<ProductPage />} />
-          {/* <Route path="/" element={<SignUp />} /> */}
+          <Route path="/" element={<SignUp />} />
         </Routes>
       </main>
     </>

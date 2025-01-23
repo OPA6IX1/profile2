@@ -53,7 +53,7 @@ const productPage = () => {
               <img
                 src={image}
                 alt="image"
-                className="w-[375px] h-[330px] rounded-3xl"
+                className="w-full rounded-3xl"
               />
             </div>
             <div className="flex items-center justify-between">
@@ -78,7 +78,9 @@ const productPage = () => {
           {/* Product Details */}
           <div className="w-full lg:w-[60%]">
             <h1 className="text-5xl font-semibold leading-tight">Plaid Sleeve Kangaroo <br/>Pocket Drawstring Hoodie</h1>
-            <p className="mt-2 text-lg">BY <span className="text-blue-700 font-medium">COSMO FASHION</span></p>
+            <p className="mt-2 text-lg">BY{" "} 
+              <span className="text-blue-700 font-medium">COSMO FASHION</span>
+            </p>
            <div className="mt-4 flex items-center gap-4">
               <div className="bg-gray-200 h-12 px-2 flex items-center justify-start rounded-lg w-fit">
                 <span className="text-[#29B6F6] text-lg font-bold">$</span>
@@ -86,7 +88,7 @@ const productPage = () => {
                 </div>
                  <div>
                   <p className="text-[#29B6F6] font-semibold text-xl"> SAVE 25% </p>
-                  <p className="text-black font-semibold px-12 m-7">inclusive deal of the day</p>
+                  <p className="text-black font-semibold">inclusive deal of the day</p>
                   </div>
             </div>
 
